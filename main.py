@@ -1,16 +1,17 @@
 from main_lib import * 
 
+load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/api/account/all', methods=['GET'])
 def get_all_account():
     # Kết nối đến MySQL
-    cnx = mysql.connector.connect(user='root', 
-                                password='JohnnyTr@n1101',
-                                host='localhost',
-                                port='3307',
-                                database='test')
+    cnx = mysql.connector.connect(user=os.getenv('MYSQL_USER'), 
+                                password=os.getenv('MYSQL_PASSWORD'),
+                                host=os.getenv('MYSQL_HOST'),
+                                port=os.getenv('MYSQL_PORT'),
+                                database=os.getenv('MYSQL_DB'))
 
     # Tạo một đối tượng cursor
     cursor = cnx.cursor()
@@ -38,11 +39,11 @@ def get_all_account():
 @app.route('/api/account/create', methods=['GET'])
 def create_account():
     # Kết nối đến MySQL
-    cnx = mysql.connector.connect(user='root', 
-                                password='JohnnyTr@n1101',
-                                host='localhost',
-                                port='3307',
-                                database='test')
+    cnx = mysql.connector.connect(user=os.getenv('MYSQL_USER'), 
+                                password=os.getenv('MYSQL_PASSWORD'),
+                                host=os.getenv('MYSQL_HOST'),
+                                port=os.getenv('MYSQL_PORT'),
+                                database=os.getenv('MYSQL_DB'))
 
     # Tạo một đối tượng cursor
     cursor = cnx.cursor()

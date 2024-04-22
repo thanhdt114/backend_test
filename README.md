@@ -1,6 +1,13 @@
 # Instructions for running this project
-**NOTE:**
+
+**NOTE 1:**
 Replace Python3 with Python if your computer has Python installed
+
+**NOTE 2:**
+Replace the values of variables in the .env file with values to connect to mysql on your computer
+
+**NOTE 3:**
+Create 1 database with test name if your mysql is not there 
 
 1. Create python environment
 ```bash

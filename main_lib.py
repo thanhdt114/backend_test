@@ -18,3 +18,17 @@ except ImportError:
     import pip
     pip.main(['install', 'mysql-connector-python'])
     import mysql.connector
+
+try:
+    import os
+except ImportError:
+    import pip
+    pip.main(['install', 'os'])
+    import os
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    import pip
+    pip.main(['install', 'python-dotenv'])
+    from dotenv import load_dotenv
