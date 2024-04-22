@@ -24,7 +24,7 @@ source .venv/bin/activate
 ```bash
 .venv\Scripts\activate
 ```
-The cursor in the terminal should look like this (with .env)
+The cursor in the terminal should look like this (with .venv)
 ```cmd
 (.venv) johnny@johnny-Inspiron-5502:/media/johnny/Data/Code/cloud_service/be_test$
 ```
@@ -36,21 +36,21 @@ python3 main.py
 
 # API User Guide
 1. Test api
-- Link: `http://192.168.1.101:5000`
+- Link: `http://localhost:5000`
 - Respone: 
 ```console
 BE Hello
 ```
 
 2. Create data api
-- Link: `http://192.168.1.101:5000/api/account/create`
+- Link: `http://localhost:5000/api/account/create`
 - Respone: 
 ```console
 Account added
 ```
 
 3. Get all data api
-- Link: `http://192.168.1.101:5000/api/account/all`
+- Link: `http://localhost:5000/api/account/all`
 - Respone: 
 ```console
 [
